@@ -1,0 +1,16 @@
+stages:
+  ocr:
+    cmd: python src/ocr/extract.py data/raw_images/sample.jpg
+    deps:
+      - src/ocr/extract.py
+      - data/raw_images/sample.jpg
+    outs:
+      - data/ocr_output/sample.txt
+
+  summarize:
+    cmd: python src/summarize/summarize.py 
+    deps:
+      - src/summarize/summarize.py
+      - data/ocr_output/sample.txt
+    outs:
+      - data/summaries/sample_summary.txt
