@@ -1,0 +1,8 @@
+fastapi          0.120.0
+pip              25.2
+pytesseract      0.3.13
+python-multipart 0.0.20
+setuptools       80.9.0
+torchvision      0.24.0+cu126
+transformers     4.57.1
+uvicorn          0.38.0
