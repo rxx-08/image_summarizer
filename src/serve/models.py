@@ -1,7 +1,7 @@
 # models.py
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from sqlalchemy.sql import func
-from db import Base
+from src.serve.db import Base
 
 class Summary(Base):
     __tablename__ = "summaries"

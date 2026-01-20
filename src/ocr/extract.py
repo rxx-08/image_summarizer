@@ -4,15 +4,7 @@ import os
 import sys
 
 def extract_text_from_image(image_path: str) -> str:
-    """
-    Extract text from an image using Tesseract OCR.
-
-    Args:
-        image_path (str): The path to the image file.
-
-    Returns:
-        str: The extracted text from the image.
-    """
+    
     try:
         # Open the image file
         with Image.open(image_path) as img:
@@ -29,13 +21,20 @@ def extract_text_from_image(image_path: str) -> str:
             print("Usage: python extract.py <image_path>")
             sys.exit(1)
 
-        image_path = sys.argv[1]
+        # image_path = sys.argv[1]
+        # if not os.path.isfile(image_path):
+        #     print(f"File not found: {image_path}")
+        #     sys.exit(1)
+
+        image_path = "C:\\Users\\rasag\\Downloads\\download (4).jpeg"
         if not os.path.isfile(image_path):
             print(f"File not found: {image_path}")
             sys.exit(1)
+
 
         extracted_text = extract_text_from_image(image_path)
         with open("output_data.txt", "w", encoding="utf-8") as f:
             f.write(extracted_text)
 
-        print("Text extraction complete. Check output_data.txt for results.")   
+        print("Text extraction complete. Check output_data.txt for results.")
+        print('extracted_text:', extracted_text)

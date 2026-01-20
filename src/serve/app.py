@@ -104,9 +104,9 @@ from sqlalchemy.orm import Session
 import pytesseract
 from PIL import Image, ImageEnhance, ImageFilter
 from transformers import pipeline
-from serve.db import get_db
-from serve.models import Summary
-from serve.schemas import SummaryResponse
+from src.serve.db import get_db
+from src.serve.models import Summary
+from src.serve.schemas import SummaryResponse
 
 # ✅ Path to your Tesseract executable
 pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
